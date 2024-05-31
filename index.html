@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Demo - Responsive Images
+    </title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Responsive images</h1>
+
+        <section>
+            <h2>Same image / different sizes</h2>
+
+            <!-- this src img will serve as the default image -->
+            <!-- add the next size with the width on the last part 320w -->
+            <!-- the w in srcset and the px values in sizes needs to match -->
+            <img 
+                srcset="images/dummy_320x200.png 320w,
+                        images/dummy_640x400.png 640w,
+                        images/dummy_1024x600.png 1024w"
+
+                sizes="(max-width:320px) 320px,
+                       (max-width:640px) 640px,  
+                       (max-width:1024px) 1024px"
+                src="images/dummy_640x400.png" 
+                alt="Placeholder image">
+        </section>
+
+        <section>
+            <h2> Same size /different resolution</h2>
+
+            <!-- first option in the srcset is standard resolution in this case 320x320 -->
+            <!-- the second option is x2 of the size of the first and can be tested by adjusting DPR -->
+            <!-- the third item is x3 of the first image and can be tried using dpr 3 in dev tool -->
+            <img 
+                srcset="images/dummy_320x320.png,
+                images/dummy_640x640.png 2x,
+                images/dummy_960x960.png 3x
+                
+                "
+
+                src="images/dummy_640x640.png" 
+                alt="Placeholder Image" class="avatar">
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

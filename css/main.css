@@ -1,0 +1,11 @@
+/* add this in the assignment for better image view */
+img{
+    width: 100%;
+}
+
+
+/* this setting makes a circle */
+.avatar{
+    max-width: 320px;
+    border-radius: 50%;
+}
